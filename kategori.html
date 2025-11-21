@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image" href="img/ui/favicon.png"/>
+    <title>Kategori - FashionHub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light d-flex flex-column min-vh-100">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">FashionHub</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="main-nav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="kategori.html">Kategori</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="diskon.html">Diskon</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto flex-lg-row align-items-lg-center">
+                    <li class="nav-item me-lg-3">
+                        <a class="nav-link" href="keranjang.html" title="Keranjang Belanja">
+                            <span class="position-relative">
+                                <i class="bi bi-cart fs-5"></i>
+                                <span id="cart-badge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 0.6em; display: none;">
+                                    0
+                                    <span class="visually-hidden">item di keranjang</span>
+                                </span>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html" title="Login/Profil">
+                            <i class="bi bi-person-circle fs-5"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <h1 class="display-6 fw-bold">Semua Produk</h1>
+            <p class="mb-0">Temukan produk fashion favorit Anda di sini.</p>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="card shadow-sm border-0">
+                    <div class="card-header bg-white">
+                        <h5 class="mb-0">Filter Produk</h5>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="fw-bold">Kategori</h6>
+                        <ul class="list-group list-group-flush mb-3">
+                            <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0">
+                                <a href="#" class="text-decoration-none text-dark">Pakaian Pria</a>
+                                <span class="badge bg-secondary rounded-pill">12</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0">
+                                <a href="#" class="text-decoration-none text-dark">Pakaian Wanita</a>
+                                <span class="badge bg-secondary rounded-pill">25</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0">
+                                <a href="#" class="text-decoration-none text-dark">Aksesoris</a>
+                                <span class="badge bg-secondary rounded-pill">8</span>
+                            </li>
+                        </ul>
+
+                        <div class="mb-4">
+                            <h6 class="fw-bold mb-3">Rentang Harga</h6>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="priceRangeDiskon" id="priceAllDiskon" value="all" checked>
+                                <label class="form-check-label" for="priceAllDiskon">Semua Harga</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="priceRangeDiskon" id="price1Diskon" value="0-100000">
+                                <label class="form-check-label" for="price1Diskon">Di bawah Rp 100.000</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="priceRangeDiskon" id="price2Diskon" value="100000-250000">
+                                <label class="form-check-label" for="price2Diskon">Rp 100.000 - Rp 250.000</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="priceRangeDiskon" id="price3Diskon" value="250000-500000">
+                                <label class="form-check-label" for="price3Diskon">Rp 250.000 - Rp 500.000</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="priceRangeDiskon" id="price4Diskon" value="500000-max">
+                                <label class="form-check-label" for="price4Diskon">Di atas Rp 500.000</label>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                                <h6 class="fw-bold mb-3">Warna</h6>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <div class="color-circle border border-secondary active" data-color="all" data-bs-toggle="tooltip" data-bs-placement="top" title="Semua Warna">
+                                        <i class="bi bi-check-lg" style="font-size: 1.2em;"></i> 
+                                    </div>
+                                    <div class="color-circle bg-dark" data-color="Hitam" data-bs-toggle="tooltip" data-bs-placement="top" title="Hitam"></div>
+                                    <div class="color-circle bg-white border border-dark" data-color="Putih" data-bs-toggle="tooltip" data-bs-placement="top" title="Putih"></div>
+                                    <div class="color-circle bg-primary" data-color="Biru" data-bs-toggle="tooltip" data-bs-placement="top" title="Biru"></div>
+                                    <div class="color-circle bg-danger" data-color="Merah" data-bs-toggle="tooltip" data-bs-placement="top" title="Merah"></div>
+                                    <div class="color-circle bg-success" data-color="Hijau" data-bs-toggle="tooltip" data-bs-placement="top" title="Hijau"></div>
+                                    <div class="color-circle bg-secondary" data-color="Abu-abu" data-bs-toggle="tooltip" data-bs-placement="top" title="Abu-abu"></div>
+                                    <div class="color-circle" data-color="Pink" style="background-color: #ff69b4;" data-bs-toggle="tooltip" data-bs-placement="top" title="Pink"></div>
+                                </div>
+                            </div>
+                        <a href="#" class="btn btn-primary w-100 mt-4">Terapkan Filter</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-9">
+                <div class="d-flex justify-content-end mb-3">
+                    <select class="form-select w-auto">
+                        <option selected>Urutkan berdasarkan: Terbaru</option>
+                        <option value="1">Harga: Terendah ke Tertinggi</option>
+                        <option value="2">Harga: Tertinggi ke Terendah</option>
+                        <option value="3">Nama: A-Z</option>
+                    </select>
+                </div>
+            
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100 shadow-sm border-0">
+                            <img src="img/products/urban-hoodie.jpg" class="card-img-top" alt="Urban Hoodie" style="height: 300px; object-fit: cover;">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Urban Hoodie</h5>
+                                <p class="card-text fw-bold text-primary">Rp 320.000</p>
+                                <button class="btn btn-outline-dark w-100 mt-auto btn-view-detail"
+                                    data-product-id="P5"
+                                    data-name="Urban Hoodie"
+                                    data-price="320000"
+                                    data-image="img/products/urban-hoodie.jpg"
+                                    data-desc="Hoodie kasual dengan bahan fleece tebal, cocok untuk cuaca dingin.">
+                                    Lihat Detail
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100 shadow-sm border-0">
+                            <img src="img/products/blouse-wanita-elegan.jpg" class="card-img-top" alt="Blouse Wanita Elegan" style="height: 300px; object-fit: cover;">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Blouse Wanita Elegan</h5>
+                                <p class="card-text fw-bold text-primary">Rp 199.000</p>
+                                <button class="btn btn-outline-dark w-100 mt-auto btn-view-detail"
+                                    data-product-id="P6"
+                                    data-name="Blouse Wanita Elegan"
+                                    data-price="199000"
+                                    data-image="img/products/blouse-wanita-elegan.jpg"
+                                    data-desc="Blouse sifon wanita yang elegan untuk acara formal atau semi-formal.">
+                                    Lihat Detail
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100 shadow-sm border-0">
+                            <img src="img/products/vintage-denim-jacket.jpg" class="card-img-top" alt="Vintage Denim Jacket" style="height: 300px; object-fit: cover;">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Vintage Denim Jacket</h5>
+                                <p class="card-text fw-bold text-primary">Rp 499.000</p>
+                                <button class="btn btn-outline-dark w-100 mt-auto btn-view-detail"
+                                    data-product-id="P1"
+                                    data-name="Vintage Denim Jacket"
+                                    data-price="499000"
+                                    data-image="img/products/vintage-denim-jacket.jpg"
+                                    data-desc="Jaket denim bergaya vintage dengan bahan premium yang nyaman. Cocok untuk tampilan kasual sehari-hari.">
+                                    Lihat Detail
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+
+                <nav class="mt-4 d-flex justify-content-center">
+                    <ul class="pagination">
+                        <li class="page-item disabled"><a class="page-link" href="#">Sebelumnya</a></li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Selanjutnya</a></li>
+                    </ul>
+                </nav>
+            </div> 
+        </div> 
+    </main> 
+
+    <footer class="bg-dark text-white pt-5 pb-4 mt-auto">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-4 mb-md-0 text-center text-md-start">
+                <h5 class="fw-bold text-uppercase mb-3">FashionHub</h5>
+                <p class="small">
+                    Destinasi utama Anda untuk fashion terkini. Temukan pakaian berkualitas, tren terbaru, dan penawaran spesial hanya di FashionHub.
+                </p>
+                <p class="small mb-0">&copy; 2025 FashionHub. Hak Cipta Dilindungi Undang-Undang.</p>
+            </div>
+
+            <div class="col-md-2 col-6 mb-4 mb-md-0">
+                <h6 class="text-uppercase fw-bold mb-3">Navigasi</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="index.html" class="text-white text-decoration-none small">Beranda</a></li>
+                    <li class="mb-2"><a href="kategori.html" class="text-white text-decoration-none small">Kategori</a></li>
+                    <li class="mb-2"><a href="diskon.html" class="text-white text-decoration-none small">Diskon</a></li>
+                    <li class="mb-2"><a href="keranjang.html" class="text-white text-decoration-none small">Keranjang</a></li>
+                    <li class="mb-2"><a href="login.html" class="text-white text-decoration-none small">Akun Saya</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 col-6 mb-4 mb-md-0">
+                <h6 class="text-uppercase fw-bold mb-3">Informasi</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="#" class="text-white text-decoration-none small">Tentang Kami</a></li>
+                    <li class="mb-2"><a href="#" class="text-white text-decoration-none small">Kebijakan Privasi</a></li>
+                    <li class="mb-2"><a href="#" class="text-white text-decoration-none small">Syarat & Ketentuan</a></li>
+                    <li class="mb-2"><a href="#" class="text-white text-decoration-none small">Hubungi Kami</a></li>
+                    <li class="mb-2"><a href="#" class="text-white text-decoration-none small">FAQ</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 mb-4 mb-md-0 text-center text-md-start">
+                <h6 class="text-uppercase fw-bold mb-3">Ikuti Kami</h6>
+                <div class="d-flex justify-content-center justify-content-md-start gap-3 fs-4">
+                    <a href="https://www.facebook.com/" class="text-white"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/" class="text-white"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.x.com/" class="text-white"><i class="bi bi-twitter-x"></i></a>
+                    <a href="https://www.linkedin.com/" class="text-white"><i class="bi bi-linkedin"></i></a>
+                </div>
+                <h6 class="text-uppercase fw-bold mb-2 mt-4">Hubungi Kami</h6>
+                <p class="small mb-1"><i class="bi bi-geo-alt-fill me-2"></i> Jl. MontongSekar No. 123, Kota Tuban, Indonesia</p>
+                <p class="small mb-1"><i class="bi bi-envelope-fill me-2"></i> info@fashionhub.com</p>
+                <p class="small mb-1"><i class="bi bi-telephone-fill me-2"></i> +62 812 3934 5766</p>
+            </div>
+        </div>
+    </div>
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        <p class="small mb-0">Dibuat oleh Tim FashionHub.</p>
+    </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

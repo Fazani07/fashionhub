@@ -1,0 +1,66 @@
+body {
+    /* Mengatur body agar jadi layout flex vertikal */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    /* Memaksa konten 'main'& mendorong footer ke bawah */
+    flex-grow: 1;
+}
+
+.color-circle {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    border: 1px solid #dee2e6;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    overflow: hidden; 
+}
+
+/* Style untuk lingkaran warna putih agar terlihat */
+.color-circle.bg-white {
+    border: 1px solid #adb5bd; /* Border lebih gelap untuk warna putih */
+}
+
+.color-circle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.color-circle.active {
+    border: 3px solid #0d6efd; 
+    transform: scale(1.05); 
+}
+
+.color-circle.active i.bi-check-lg {
+    color: #0d6efd; 
+}
+
+.color-circle i.bi-check-lg {
+    color: #6c757d;
+}
+
+.card {
+    overflow: hidden;
+}
+
+.card-img-top {
+    transition: transform 0.5s ease; 
+    transform-origin: center center; 
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.1); 
+}
+
+.card:hover {
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important; 
+    transition: box-shadow 0.3s ease;
+}

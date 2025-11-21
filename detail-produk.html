@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image" href="img/ui/favicon.png"/>
+    <title id="page-title">Detail Produk - FashionHub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light d-flex flex-column min-vh-100">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">FashionHub</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="main-nav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="kategori.html">Kategori</a></li>
+                    <li class="nav-item"><a class="nav-link" href="diskon.html">Diskon</a></li>
+                </ul>
+                <ul class="navbar-nav ms-auto flex-lg-row align-items-lg-center">
+                    <li class="nav-item me-lg-3">
+                        <a class="nav-link" href="keranjang.html" title="Keranjang Belanja">
+                            <span class="position-relative">
+                                <i class="bi bi-cart fs-5"></i>
+                                <span id="cart-badge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 0.6em; display: none;">0</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html" title="Login/Profil">
+                            <i class="bi bi-person-circle fs-5"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5">
+        <nav aria-label="breadcrumb" class="mb-4">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html">Beranda</a></li>
+              <li class="breadcrumb-item"><a href="kategori.html">Kategori</a></li>
+              <li class="breadcrumb-item active" aria-current="page" id="breadcrumb-name">Nama Produk</li>
+            </ol>
+        </nav>
+
+        <div class="row g-4">
+            <div class="col-md-6">
+                <img src="https://via.placeholder.com/600x800?text=Produk" class="img-fluid rounded shadow-sm" alt="Gambar Produk" id="product-image">
+            </div>
+            <div class="col-md-6">
+                <h1 class="mb-3" id="product-name">Nama Produk</h1>
+                <h3 class="mb-4 text-primary fw-bold" id="product-price">Rp 0</h3>
+                <p class="lead mb-4" id="product-description">
+                    Deskripsi singkat produk akan muncul di sini. Ini adalah tempat untuk memberikan gambaran umum kepada pembeli.
+                </p>
+
+                <div class="mb-3">
+                    <label for="size-select" class="form-label fw-bold">Pilih Ukuran:</label>
+                    <select class="form-select w-auto" id="size-select">
+                        <option value="S">Small (S)</option>
+                        <option value="M" selected>Medium (M)</option>
+                        <option value="L">Large (L)</option>
+                        <option value="XL">Extra Large (XL)</option>
+                    </select>
+                </div>
+
+                <div class="mb-4">
+                    <label for="quantity-input" class="form-label fw-bold">Jumlah:</label>
+                    <input type="number" class="form-control w-auto" id="quantity-input" value="1" min="1" max="10">
+                </div>
+
+                <div class="d-grid gap-2 d-md-block">
+                    <button class="btn btn-primary btn-lg me-md-2" type="button" id="btn-add-to-cart-detail">
+                        <i class="bi bi-cart-plus me-2"></i>Tambah ke Keranjang
+                    </button>
+                    <button class="btn btn-outline-danger btn-lg" type="button" id="btn-wishlist-detail" title="Tambah ke Wishlist">
+                        <i class="bi bi-heart"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-5">
+        <div class="row">
+            <div class="col-12">
+                <ul class="nav nav-tabs mb-3" id="productTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="desc-tab" data-bs-toggle="tab" data-bs-target="#desc-content" type="button" role="tab" aria-controls="desc-content" aria-selected="true">Deskripsi Lengkap</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews-content" type="button" role="tab" aria-controls="reviews-content" aria-selected="false">Ulasan Produk (3)</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="productTabsContent">
+                    <div class="tab-pane fade show active p-3 border border-top-0 bg-white rounded-bottom" id="desc-content" role="tabpanel" aria-labelledby="desc-tab">
+                        <p>Hoodie ini dirancang untuk kenyamanan maksimal dan gaya modern yang tak lekang oleh waktu. Dibuat dari bahan fleece katun premium 100%, hoodie ini terasa lembut di kulit, hangat, dan sangat ideal untuk menemani aktivitas Anda di cuaca sejuk maupun saat bersantai.</p>
+                        <ul>
+                            <li>Bahan: Katun premium 100%</li>
+                            <li>Warna: Tersedia dalam 3 pilihan warna</li>
+                            <li>Fitur: Desain ergonomis, sirkulasi udara baik</li>
+                            <li>Panduan Perawatan: Cuci dengan tangan, jangan gunakan pemutih</li>
+                        </ul>
+                        <p>Hoodie ini adalah investasi sempurna untuk melengkapi koleksi pakaian kasual Anda. Padukan dengan celana jeans favorit, celana jogger, atau bahkan rok midi untuk tampilan yang stylish dan nyaman di setiap kesempatan.</p>
+                    </div>
+                    <div class="tab-pane fade p-3 border border-top-0 bg-white rounded-bottom" id="reviews-content" role="tabpanel" aria-labelledby="reviews-tab">
+                        <h5>Ulasan Pembeli</h5>
+                        <div class="mb-4 border-bottom pb-3">
+                            <strong>Budi Santoso</strong> <span class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></span>
+                            <p class="small text-muted mb-1">12 November 2025</p>
+                            <p>Jaketnya bagus banget, sesuai ekspektasi. Pengiriman cepat!</p>
+                        </div>
+                        <div class="mb-4 border-bottom pb-3">
+                            <strong>Citra Dewi</strong> <span class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span>
+                            <p class="small text-muted mb-1">10 November 2025</p>
+                            <p>Bahannya nyaman dan ukurannya pas. Pasti beli lagi di sini.</p>
+                        </div>
+                        <div class="mb-4 border-bottom pb-3">
+                            <strong>Ahmad Riyadi</strong> <span class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span>
+                            <p class="small text-muted mb-1">08 November 2025</p>
+                            <p>Produk oke, tapi pengiriman agak lama sedikit.</p>
+                        </div>
+                        <hr>
+
+                        <h5>Tulis Ulasan Anda</h5>
+                        <form>
+                            <div class="mb-3">
+                                <label for="rating" class="form-label">Rating</label>
+                                <select class="form-select" id="rating">
+                                    <option>5 Bintang</option>
+                                    <option>4 Bintang</option>
+                                    <option>3 Bintang</option>
+                                    <option>2 Bintang</option>
+                                    <option>1 Bintang</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="reviewText" class="form-label">Ulasan Anda</label>
+                                <textarea class="form-control" id="reviewText" rows="3"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Kirim Ulasan</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white pt-5 pb-4 mt-auto">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-4 mb-md-0 text-center text-md-start">
+                <h5 class="fw-bold text-uppercase mb-3">FashionHub</h5>
+                <p class="small">
+                    Destinasi utama Anda untuk fashion terkini. Temukan pakaian berkualitas, tren terbaru, dan penawaran spesial hanya di FashionHub.
+                </p>
+                <p class="small mb-0">&copy; 2025 FashionHub. Hak Cipta Dilindungi Undang-Undang.</p>
+            </div>
+
+            <div class="col-md-2 col-6 mb-4 mb-md-0">
+                <h6 class="text-uppercase fw-bold mb-3">Navigasi</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="index.html" class="text-white text-decoration-none small">Beranda</a></li>
+                    <li class="mb-2"><a href="kategori.html" class="text-white text-decoration-none small">Kategori</a></li>
+                    <li class="mb-2"><a href="diskon.html" class="text-white text-decoration-none small">Diskon</a></li>
+                    <li class="mb-2"><a href="keranjang.html" class="text-white text-decoration-none small">Keranjang</a></li>
+                    <li class="mb-2"><a href="login.html" class="text-white text-decoration-none small">Akun Saya</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 col-6 mb-4 mb-md-0">
+                <h6 class="text-uppercase fw-bold mb-3">Informasi</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="#" class="text-white text-decoration-none small">Tentang Kami</a></li>
+                    <li class="mb-2"><a href="#" class="text-white text-decoration-none small">Kebijakan Privasi</a></li>
+                    <li class="mb-2"><a href="#" class="text-white text-decoration-none small">Syarat & Ketentuan</a></li>
+                    <li class="mb-2"><a href="#" class="text-white text-decoration-none small">Hubungi Kami</a></li>
+                    <li class="mb-2"><a href="#" class="text-white text-decoration-none small">FAQ</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 mb-4 mb-md-0 text-center text-md-start">
+                <h6 class="text-uppercase fw-bold mb-3">Ikuti Kami</h6>
+                <div class="d-flex justify-content-center justify-content-md-start gap-3 fs-4">
+                    <a href="https://www.facebook.com/" class="text-white"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/" class="text-white"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.x.com/" class="text-white"><i class="bi bi-twitter-x"></i></a>
+                    <a href="https://www.linkedin.com/" class="text-white"><i class="bi bi-linkedin"></i></a>
+                </div>
+                <h6 class="text-uppercase fw-bold mb-2 mt-4">Hubungi Kami</h6>
+                <p class="small mb-1"><i class="bi bi-geo-alt-fill me-2"></i> Jl. MontongSekar No. 123, Kota Tuban, Indonesia</p>
+                <p class="small mb-1"><i class="bi bi-envelope-fill me-2"></i> info@fashionhub.com</p>
+                <p class="small mb-1"><i class="bi bi-telephone-fill me-2"></i> +62 812 3934 5766</p>
+            </div>
+        </div>
+    </div>
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        <p class="small mb-0">Dibuat oleh Tim FashionHub.</p>
+    </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

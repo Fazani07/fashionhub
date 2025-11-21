@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image" href="../img/ui/favicon.png"/>
+    <title>Manajemen Produk - Admin FashionHub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+    <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="admin-dashboard.html">FashionHub Admin</a>
+    <ul class="navbar-nav flex-row d-md-none"> <li class="nav-item text-nowrap">
+            <a class="nav-link px-3" href="admin-login.html">Keluar</a>
+        </li>
+        <li class="nav-item text-nowrap">
+            <button class="navbar-toggler px-3" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </li>
+    </ul>
+    <ul class="navbar-nav d-none d-md-flex ms-auto flex-row"> <li class="nav-item text-nowrap">
+            <a class="nav-link px-3" href="admin-login.html">Keluar</a>
+        </li>
+    </ul>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+                <div class="position-sticky pt-3">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="admin-dashboard.html">
+                                <i class="bi bi-house-door-fill me-2"></i>
+                                Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="admin-manajemen-produk.html">
+                                <i class="bi bi-box-seam-fill me-2"></i>
+                                Manajemen Produk
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="admin-manajemen-pesanan.html">
+                                <i class="bi bi-file-earmark-text-fill me-2"></i>
+                                Manajemen Pesanan
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="admin-laporan-penjualan.html">
+                                <i class="bi bi-bar-chart-fill me-2"></i>
+                                Laporan Penjualan
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="admin-manajemen-diskon.html">
+                                <i class="bi bi-tags-fill me-2"></i>
+                                Manajemen Diskon
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Manajemen Produk</h1>
+                    <div class="btn-toolbar mb-2 mb-md-0">
+                        <button type="button" class="btn btn-sm btn-primary" id="btnTambahProduk" data-bs-toggle="modal" data-bs-target="#productModal">
+                            <i class="bi bi-plus-circle-fill me-1"></i>
+                            Tambah Produk Baru
+                        </button>
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover align-middle">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Gambar</th>
+                                <th>Nama Produk</th>
+                                <th>Kategori</th>
+                                <th>Harga</th>
+                                <th>Stok</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody id="product-table-body">
+                            <tr>
+                                <td>1</td>
+                                <td>
+                                    <img src="../img/products/vintage-denim-jacket.jpg" alt="Vintage Denim Jacket" class="rounded admin-table-img">
+                                </td>
+                                <td>Vintage Denim Jacket</td>
+                                <td>Pakaian Pria</td>
+                                <td>Rp 499.000</td>
+                                <td>50</td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline-secondary btn-edit" title="Edit"><i class="bi bi-pencil-fill"></i></button>
+                                    <button class="btn btn-sm btn-outline-danger btn-delete" title="Hapus"><i class="bi bi-trash-fill"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>
+                                    <img src="../img/products/kemeja-flanel-kotak.jpg" alt="Kemeja Flanel" class="rounded admin-table-img">
+                                </td>
+                                <td>Kemeja Flanel Kotak</td>
+                                <td>Pakaian Pria</td>
+                                <td>Rp 249.000</td>
+                                <td>120</td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline-secondary btn-edit" title="Edit"><i class="bi bi-pencil-fill"></i></button>
+                                    <button class="btn btn-sm btn-outline-danger btn-delete" title="Hapus"><i class="bi bi-trash-fill"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>
+                                    <img src="../img/products/celana-chino-slim-fit.jpg" alt="Celana Chino" class="rounded admin-table-img">
+                                </td>
+                                <td>Celana Chino Slim-Fit</td>
+                                <td>Pakaian Pria</td>
+                                <td>Rp 299.000</td>
+                                <td>80</td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline-secondary btn-edit" title="Edit"><i class="bi bi-pencil-fill"></i></button>
+                                    <button class="btn btn-sm btn-outline-danger btn-delete" title="Hapus"><i class="bi bi-trash-fill"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>
+                                    <img src="../img/products/basic-white-sneakers.jpg" alt="Sneakers" class="rounded admin-table-img">
+                                </td>
+                                <td>Basic White Sneakers</td>
+                                <td>Aksesoris</td>
+                                <td>Rp 349.000</td>
+                                <td>30</td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline-secondary btn-edit" title="Edit"><i class="bi bi-pencil-fill"></i></button>
+                                    <button class="btn btn-sm btn-outline-danger btn-delete" title="Hapus"><i class="bi bi-trash-fill"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>
+                                    <img src="../img/products/urban-hoodie.jpg" alt="Hoodie" class="rounded admin-table-img">
+                                </td>
+                                <td>Urban Hoodie</td>
+                                <td>Pakaian Pria</td>
+                                <td>Rp 320.000</td>
+                                <td>45</td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline-secondary btn-edit" title="Edit"><i class="bi bi-pencil-fill"></i></button>
+                                    <button class="btn btn-sm btn-outline-danger btn-delete" title="Hapus"><i class="bi bi-trash-fill"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <form id="productForm">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="productModalLabel">Tambah Produk Baru</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="mb-3">
+                                    <label for="productName" class="form-label">Nama Produk</label>
+                                    <input type="text" class="form-control" id="productName" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="productCategory" class="form-label">Kategori</label>
+                                    <input type="text" class="form-control" id="productCategory" required>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="productPrice" class="form-label">Harga (Hanya Angka)</label>
+                                        <input type="number" class="form-control" id="productPrice" placeholder="299000" min="0" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="productStock" class="form-label">Stok</label>
+                                        <input type="number" class="form-control" id="productStock" value="0" min="0" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="productDescription" class="form-label">Deskripsi Produk (Opsional)</label>
+                                    <textarea class="form-control" id="productDescription" rows="3"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <h6 class="text-center">Gambar Produk</h6>
+                                <img src="https://via.placeholder.com/150x200?text=Preview" id="modalImagePreview" class="img-fluid rounded modal-image-preview" alt="Preview" style="object-fit: cover;">
+                                <label for="productImageFile" class="form-label small">Upload Gambar</label>
+                                <input type="file" class="form-control" id="productImageFile" accept="image/*">
+                                <small class="form-text text-muted">Akan membuat preview lokal.</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                        <button type="submit" class="btn btn-primary">Simpan</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>

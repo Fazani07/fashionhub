@@ -1,0 +1,99 @@
+/* Style untuk Admin Panel */
+html,
+body {
+    height: 100%;
+}
+
+body.admin-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #f5f5f5; /* Latar belakang abu-abu */
+}
+
+.form-signin {
+    width: 100%;
+    max-width: 400px;
+    padding: 15px;
+    margin: auto;
+}
+
+body {
+    font-size: 0.875rem; /* Sedikit lebih kecil */
+}
+
+/* --- Sidebar --- */
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100; 
+    padding: 48px 0 0; /* Padding untuk navbar atas */
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+}
+
+/* --- Sidebar Nav --- */
+.sidebar .nav-link {
+    font-weight: 500;
+    color: #333;
+}
+.sidebar .nav-link .bi {
+    margin-right: 4px;
+    color: #727272;
+}
+.sidebar .nav-link.active {
+    color: #0d6efd; /* Warna biru Bootstrap */
+}
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+    background-color: #e9ecef;
+}
+
+/* --- Navbar Atas --- */
+.navbar-brand {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    font-size: 1rem;
+    background-color: rgba(0, 0, 0, .25);
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
+}
+
+.navbar .navbar-toggler {
+    top: .25rem;
+    right: 1rem;
+}
+
+.navbar .nav-link {
+    color: rgba(255, 255, 255, .75);
+}
+.navbar .nav-link:hover {
+    color: #fff;
+}
+
+/* --- Konten Utama --- */
+main {
+    padding-top: 1.5rem; /* Memberi jarak dari header */
+}
+
+/* Style untuk gambar di tabel admin */
+.admin-table-img {
+    width: 60px;
+    height: 80px; 
+    object-fit: cover; /* Mencegah gambar penyok */
+}
+
+/* Style untuk preview gambar di modal */
+.modal-image-preview {
+    width: 150px;
+    height: 200px; /* Proporsi 3:4 */
+    object-fit: cover;
+    border: 1px solid #ddd;
+    border-radius: .375rem; /* rounded */
+}
+
+.modal-image-preview {
+    margin-bottom: 1rem; /* Memberi jarak antara preview dan tombol 'Choose File' */
+}

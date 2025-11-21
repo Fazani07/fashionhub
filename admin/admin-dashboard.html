@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image" href="../img/ui/favicon.png"/>
+    <title>Dashboard - Admin FashionHub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+    <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="admin-dashboard.html">FashionHub Admin</a>
+    <ul class="navbar-nav flex-row d-md-none"> <li class="nav-item text-nowrap">
+            <a class="nav-link px-3" href="admin-login.html">Keluar</a>
+        </li>
+        <li class="nav-item text-nowrap">
+            <button class="navbar-toggler px-3" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </li>
+    </ul>
+    <ul class="navbar-nav d-none d-md-flex ms-auto flex-row"> <li class="nav-item text-nowrap">
+            <a class="nav-link px-3" href="admin-login.html">Keluar</a>
+        </li>
+    </ul>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+                <div class="position-sticky pt-3">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="admin-dashboard.html">
+                                <i class="bi bi-house-door-fill me-2"></i>
+                                Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="admin-manajemen-produk.html">
+                                <i class="bi bi-box-seam-fill me-2"></i>
+                                Manajemen Produk
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="admin-manajemen-pesanan.html">
+                                <i class="bi bi-file-earmark-text-fill me-2"></i>
+                                Manajemen Pesanan
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="admin-laporan-penjualan.html">
+                                <i class="bi bi-bar-chart-fill me-2"></i>
+                                Laporan Penjualan
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="admin-manajemen-diskon.html">
+                                <i class="bi bi-tags-fill me-2"></i>
+                                Manajemen Diskon
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Dashboard</h1>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <div class="card text-bg-primary shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="bi bi-cash-stack me-2"></i>Total Penjualan</h5>
+                                <p class="card-text fs-3 fw-bold">Rp 12.345.000</p>
+                                <small>Bulan Ini</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card text-bg-success shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="bi bi-box-seam me-2"></i>Pesanan Baru</h5>
+                                <p class="card-text fs-3 fw-bold">15</p>
+                                <small>Menunggu Diproses</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card text-bg-warning shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="bi bi-people-fill me-2"></i>Pelanggan Baru</h5>
+                                <p class="card-text fs-3 fw-bold">8</p>
+                                <small>Minggu Ini</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="mt-4">Pesanan Terbaru</h2>
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>ID Pesanan</th>
+                                <th>Nama Pelanggan</th>
+                                <th>Total</th>
+                                <th>Status</th>
+                                <th>Tanggal</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#FASHION-123</td>
+                                <td>Radityarma Fazani</td>
+                                <td>Rp 988.000</td>
+                                <td><span class="badge bg-success">Selesai</span></td>
+                                <td>10 Nov 2025</td>
+                            </tr>
+                            <tr>
+                                <td>#FASHION-124</td>
+                                <td>Citra Lestari</td>
+                                <td>Rp 199.000</td>
+                                <td><span class="badge bg-warning">Menunggu Pembayaran</span></td>
+                                <td>11 Nov 2025</td>
+                            </tr>
+                            <tr>
+                                <td>#FASHION-125</td>
+                                <td>Ahmad Yani</td>
+                                <td>Rp 320.000</td>
+                                <td><span class="badge bg-info">Diproses</span></td>
+                                <td>11 Nov 2025</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
